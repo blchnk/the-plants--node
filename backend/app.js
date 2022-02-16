@@ -7,6 +7,8 @@ const HOST = process.env.HOST;
 
 const mainRouter = require('./routes/mainRouter');
 
+// *** *** *** *** *** *** //
+
 app.use('/', mainRouter);
 
 app.listen(PORT, () => {
