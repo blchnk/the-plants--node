@@ -1,24 +1,20 @@
+const {DataTypes} = require('sequelize');
+
 const User = db.define("user", {
     id: {
-        type: db.INTEGER,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false
     },
     name: {
-        type: db.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     age: {
-        type: db.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false
     }
 });
 
-// db.sync().then(result=>console.log(result))
-//     .catch(err=> console.log(err));
-
-db.sync({force: true}).then(result=>{
-    console.log(result);
-})
-    .catch(err=> console.log(err));
+module.exports = User;
